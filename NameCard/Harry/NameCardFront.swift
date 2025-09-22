@@ -54,7 +54,7 @@ struct NameCardFront: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .sheet(isPresented: $showingSafari) {
-            SafariView(url: URL(string: "https://\(contact.website)") ?? URL(string: "https://google.com")!)
+            CuteSafariView(url: URL(string: "https://\(contact.website)") ?? URL(string: "https://google.com")!)
         }
     }
 }

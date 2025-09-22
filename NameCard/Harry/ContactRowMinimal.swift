@@ -1,9 +1,5 @@
-//
-//  ContactRowMinimal.swift
-//  NameCard
-//
-//  Created by Harry Ng on 9/8/25.
-//oooo
+// Deprecated duplicate of ContactRowMinimal — intentionally disabled to avoid redeclaration.
+// If needed, remove this file from the build target (File Inspector ▸ Target Membership) or delete it.
 
 import SwiftUI
 

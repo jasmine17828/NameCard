@@ -1,10 +1,3 @@
-//
-//  ContactCategory.swift
-//  NameCard
-//
-//  Created by fcuiecs on 2025/9/16.
-//
-
 import SwiftData
 import Foundation
 
@@ -12,12 +5,14 @@ import Foundation
 class ContactCategory {
     var id: UUID
     var name: String
-    
+    var hue: String
+
     @Relationship(inverse: \StoredContact.category)
     var contacts: [StoredContact] = []
-    
-    init(id: UUID, name: String) {
+
+    init(id: UUID, name: String, hue: String = "blue") {
         self.id = id
         self.name = name
+        self.hue = hue
     }
 }

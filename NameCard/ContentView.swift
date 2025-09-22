@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PeopleListView()
+        TabView {
+            PeopleListView()
+                .tabItem { Label("Directory", systemImage: "person.3") }
+
+//            ManageView()
+//                .tabItem { Label("Manage", systemImage: "tray.full") }
+        }
     }
 }
 
