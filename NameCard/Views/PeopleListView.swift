@@ -3,7 +3,7 @@ import SwiftData
 
 struct PeopleListView: View {
     let people = Person.sampleData
-
+//Query相當於SwiftData的State
     @Query(sort: \ContactCategory.name) private var categories: [ContactCategory]
 
     @State private var showAddGroup = false

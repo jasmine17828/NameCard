@@ -1,6 +1,5 @@
 import SwiftData
 import Foundation
-
 @Model
 class ContactCategory {
     var id: UUID
