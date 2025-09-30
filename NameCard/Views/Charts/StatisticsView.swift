@@ -68,6 +68,13 @@ struct CategoryDistributionChart: View {
             } else {
                 Chart(data) { item in
                     // TODO: Swift Charts
+                    SectorMark(
+                    angle: .value("Count",item.count),
+                    innerRadius: .ratio(0.4),
+                    angularInset: 3.5
+                    )
+                    .foregroundStyle(Color(hex:item.color))
+                    .opacity(0.7)
                 }
                 .frame(height: 200)
             }
@@ -97,6 +104,10 @@ struct ContactsOverTimeChart: View {
             } else {
                 Chart(data) { item in
                     // TODO: Swift Charts
+                    BarMark(
+                        x: .value("Period",item.period),
+                        y: .value("Count", item.count))
+                    
                 }
                 .frame(height: 200)
             }
