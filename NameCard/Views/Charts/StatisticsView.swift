@@ -93,7 +93,7 @@ struct ContactsOverTimeChart: View {
             Text("Contacts Added Over Time")
                 .font(.headline)
                 .foregroundStyle(.primary)
-
+            
             if data.isEmpty {
                 ContentUnavailableView(
                     "No Time Data",
@@ -106,10 +106,20 @@ struct ContactsOverTimeChart: View {
                     // TODO: Swift Charts
                     BarMark(
                         x: .value("Period",item.period),
-                        y: .value("Count", item.count))
-                    
+                        y: .value("Count", item.count)
+                    )
+                    .foregroundStyle(.blue.gradient)
                 }
                 .frame(height: 200)
+                .chartYAxis {
+                    AxisMarks(position: .leading)
+                }
+                .chartXAxis{
+                    AxisMarks { _ in
+                        AxisValueLabel()
+                            .font(.caption)
+                    }
+                }
             }
         }
         .padding()
